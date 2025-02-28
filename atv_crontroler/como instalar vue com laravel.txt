@@ -1,0 +1,12 @@
+esse é um comando que deve ser executado dentro do projeto
+composer require laravel/breeze 
+
+Esse é para instalar o vue lá dentro
+php artisan breeze:install vue 
+
+Após isso você pode usar o:
+npm install
+
+Depois é só usar o npm run dev
+
+Versão laravel da escola v9.52.20 
