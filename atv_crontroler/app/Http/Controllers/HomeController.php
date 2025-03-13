@@ -3,13 +3,14 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Inertia\Inertia;
 
 class HomeController extends Controller
 {
     
     public function home(){
-        $usuario = 'Ypcilon';
-        $perfil = 'gerente';
+        $usuario = 'Ezequiel';
+        $perfil = 'Estudante de TI';
         $empresa = 'Etec';
 
         $dados = [
@@ -18,6 +19,6 @@ class HomeController extends Controller
             'empresa'=>$empresa
         ];
 
-        return view('home', $dados);
+        return Inertia::render('appTeste', $dados);
     }
 }
