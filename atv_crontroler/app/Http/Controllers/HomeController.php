@@ -12,11 +12,13 @@ class HomeController extends Controller
         $usuario = 'Ezequiel';
         $perfil = 'Estudante de TI';
         $empresa = 'Etec';
+        $numero = 10;
 
         $dados = [
             'usuario'=>$usuario,
             'perfil'=>$perfil,
-            'empresa'=>$empresa
+            'empresa'=>$empresa,
+            'numero'=>$numero
         ];
 
         return Inertia::render('appTeste', $dados);
