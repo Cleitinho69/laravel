@@ -6,19 +6,19 @@ use Illuminate\Http\Request;
 use Inertia\inertia;
 
 class verificarController extends Controller
-{
+{   
     public function verificar(Request $request){
         
-        if($request->numero > 0){
+        if( $request->numero > 0){
             $mensagem = "Esse número é positivo";
+        }elseif($request->numero == ''){
+            $mensagem = "";
         }else{
             $mensagem = "Esse número é negativo";
         }
         
-        $dados = [
-            'mensagem'=>$mensagem
-        ];
-
-        return Inertia::render('Welcome',$dados);
+        return Inertia::render('Welcome',[
+            'mensagem' => $mensagem
+        ]);
     }
 }

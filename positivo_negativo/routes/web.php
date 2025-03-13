@@ -15,5 +15,4 @@ use Inertia\Inertia;
 | contains the "web" middleware group. Now create something great!
 |
 */
-
 Route::get('/', [verificarController::class,"verificar"]);
