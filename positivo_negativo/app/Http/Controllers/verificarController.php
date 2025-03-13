@@ -16,6 +16,8 @@ class verificarController extends Controller
         }else{
             $mensagem = "Esse número é negativo";
         }
+
+        
         
         return Inertia::render('Welcome',[
             'mensagem' => $mensagem

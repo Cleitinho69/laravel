@@ -1,6 +1,6 @@
 <template>
-  <div @loadstart="enviar">
-    <form action="" @submit.prevent="enviar">
+  <div>
+    <form @submit.prevent="enviar">
       <input type="number" id="numero"/>
       <input type="submit" value="Enviar" />
     </form>
@@ -10,7 +10,6 @@
 </template>
 
 <script>
-
 import { useForm } from "@inertiajs/vue3";
 import { data } from "autoprefixer";
 
@@ -21,15 +20,18 @@ export default {
   },
   methods: {
     enviar() {
-        var numero = document.getElementById("numero").value;
-    
+      var numero = document.getElementById("numero").value;
+
       const form = useForm({
         numero: numero,
       });
 
-      form
-        .get("/")
+      form.get("/");
     },
+  },
+  mounted() {
+    var inputNumero = document.getElementById("numero");
+    inputNumero.focus();
   },
 };
 </script>
