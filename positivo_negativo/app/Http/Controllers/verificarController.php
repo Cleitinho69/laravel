@@ -11,16 +11,20 @@ class verificarController extends Controller
         
         if( $request->numero > 0){
             $mensagem = "Esse número é positivo";
-        }elseif($request->numero == ''){
+            $color = "green";
+        }elseif($request->numero == 0){
             $mensagem = "";
+            $color = "rgb(143, 142, 142)";
         }else{
             $mensagem = "Esse número é negativo";
+            $color = "red";
         }
 
         
         
         return Inertia::render('Welcome',[
-            'mensagem' => $mensagem
+            'mensagem' => $mensagem,
+            'color' => $color
         ]);
     }
 }
