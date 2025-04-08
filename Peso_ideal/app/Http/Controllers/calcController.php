@@ -19,9 +19,9 @@ class calcController extends Controller
         }
 
         return Inertia::render('result', [
-            'peso_ideal' => $peso_ideal,
+            'peso_ideal' => number_format($peso_ideal,1,','),
             'sexo' => $sex,
-            'altura' => $alt
+            'altura' => number_format($alt,2,',') 
         ]);
     }
 }
