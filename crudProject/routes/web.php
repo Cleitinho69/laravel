@@ -1,7 +1,6 @@
 <?php
-use App\Http\Controllers\calcController;
+
 use Illuminate\Support\Facades\Route;
-use Inertia\Inertia;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,6 +12,13 @@ use Inertia\Inertia;
 | contains the "web" middleware group. Now create something great!
 |
 */
-Route::get('/', function(){
-    return Inertia::render('tela_inicial');
+
+Route::get('/', function () {
+    return view('welcome');
 });
+
+
+Route::get('/index', function () {
+    return view('index');
+});
+
